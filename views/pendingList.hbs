@@ -1,0 +1,30 @@
+<h1>Pendinf Info</h1>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Manage</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each pending}}
+            <tr>
+                <td>{{this.studentName}}</td>
+                <td>{{this.studentMobile}}</td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Manage Product
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <button type="button" class="btn btn-primary btn-danger" onclick='location.href="/remove/{{this._id}}"'>Remove Student </button>
+                            <button type="button" class="btn btn-primary btn-primary" onclick='location.href="/add/{{this._id}}"'>Add Student </button>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+</div>
